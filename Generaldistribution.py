@@ -6,13 +6,10 @@ class Distribution:
         self.stdev = sigma
         self.data = []
     
-    def read_data_file (self, file_name):
+    def read_data_file(self, file_name):
         with open (file_name) as file:
             data_list = []
-            line = file.readline()
-            while line:
+            while line := file.readline():
                 data_list.append(int(line))
-                line = file.readline()
-        
         self.data = data_list
     
